@@ -15,6 +15,14 @@ import { HiDotsHorizontal } from "react-icons/hi";
 import { IoMdGitNetwork } from "react-icons/io";
 import { MdOutlineInsertLink } from "react-icons/md";
 import { LuRefreshCw } from "react-icons/lu";
+import { FaHashtag } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { CiCircleChevDown } from "react-icons/ci";
+import { IoMdPerson } from "react-icons/io";
+import { FaGlobe } from "react-icons/fa";
+import { BsPersonCheck } from "react-icons/bs";
 
 const Navbar = () => {
   return (
@@ -100,7 +108,7 @@ const Navbar = () => {
       </nav>
       <div className="grid grid-cols-12 w-full *:border-y *:border-gray-200 pl-10 pr-4">
         <div className="bg-[rgb(226,226,226)] p-2 col-span-6 flex items-center gap-2">
-          <div className=" bg-white rounded-lg p-1 w-48 flex items-center justify-center gap-2 cursor-pointer hover:bg-[rgb(246,246,246)] transition-colors duration-200">
+          <div className=" bg-white rounded w-48 flex items-center justify-center gap-2 cursor-pointer hover:bg-[rgb(246,246,246)] transition-colors duration-200">
             <MdOutlineInsertLink className="text-lg text-[rgb(26,140,255)]" />
             <p>Q3 Financial Overview</p>
           </div>
@@ -126,36 +134,175 @@ const Navbar = () => {
           <FiPlus />
         </div>
       </div>
-      <div className="grid grid-cols-12 w-full *:border-y *:border-gray-200 pl-10 pr-4">
-        <table className="border-collapse border border-gray-400 w-full col-span-12">
+      <div className=" pr-4">
+        <table className="w-full border-collapse border border-gray-400">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Job Request</th>
-              <th>Submitted</th>
-              <th>Status</th>
-              <th>URL</th>
-              <th>Assigned</th>
-              <th>priority</th>
-              <th>Due Date</th>
-              <th>Est. Value</th>
+              <th className="bg-[rgb(238,238,238)] border-y border-r  border-[rgb(246,246,246)] w-10">
+                <FaHashtag className="text-[rgb(188,188,188)]" />
+              </th>
+              <th className="bg-[rgb(238,238,238)] border-y border-r  border-[rgb(246,246,246)] w-44">
+                <div className="flex items-center justify-between p-2">
+                  <div className="flex items-center gap-2">
+                    <FaBriefcase className="text-[rgb(188,188,188)]" />
+                    <p className="text-[rgb(117,117,117)]">Job Request</p>
+                  </div>
+                  <FaChevronDown className="text-[rgb(188,188,188)]" />
+                </div>
+              </th>
+              <th className="bg-[rgb(238,238,238)] border-y border-r  border-[rgb(246,246,246)]">
+                <div className="flex items-center justify-between p-2">
+                  <div className="flex items-center gap-2">
+                    <FaRegCalendarAlt className="text-[rgb(188,188,188)]" />
+                    <p className="text-[rgb(117,117,117)]">Submitted</p>
+                  </div>
+                  <FaChevronDown className="text-[rgb(188,188,188)]" />
+                </div>
+              </th>
+              <th className="bg-[rgb(238,238,238)] border-y border-r  border-[rgb(246,246,246)]">
+                <div className="flex items-center justify-between p-2">
+                  <div className="flex items-center gap-2">
+                    <CiCircleChevDown className="text-[rgb(188,188,188)]" />
+                    <p className="text-[rgb(117,117,117)]">Status</p>
+                  </div>
+                  <FaChevronDown className="text-[rgb(188,188,188)]" />
+                </div>
+              </th>
+              <th className="bg-[rgb(238,238,238)] border-y border-r  border-[rgb(246,246,246)] w-32">
+                <div className="flex items-center justify-between gap-2 p-2">
+                  <div className="flex items-center gap-2">
+                    <IoMdPerson className="text-[rgb(188,188,188)]" />
+                    <p className="text-[rgb(117,117,117)]">Submitter</p>
+                  </div>
+                  <FaChevronDown className="text-[rgb(188,188,188)]" />
+                </div>
+              </th>
+              <th className="bg-[rgb(238,238,238)] border-y border-r  border-[rgb(246,246,246)] w-14">
+                <div className="flex items-center justify-between gap-2 p-2">
+                  <div className="flex items-center gap-2">
+                    <FaGlobe />
+                    <p className="text-[rgb(117,117,117)]">URL</p>
+                  </div>
+                  <FaChevronDown />
+                </div>
+              </th>
+              <th className="bg-[rgb(232,240,233)] border-y border-r  border-[rgb(246,246,246)] w-14">
+                <div className="flex items-center justify-between gap-2 p-2">
+                  <div className="flex items-center gap-2">
+                    <BsPersonCheck />
+                    <p className="text-[rgb(117,117,117)]">Assigned</p>
+                  </div>
+                  <FaChevronDown className="text-[rgb(188,188,188)]" />
+                </div>
+              </th>
+              <th className="bg-[rgb(234,227,252)] border-y border-r  border-[rgb(246,246,246)]">
+                Priority
+              </th>
+              <th className="bg-[rgb(234,227,252)] border-y border-r  border-[rgb(246,246,246)]">
+                Due Date
+              </th>
+              <th className="bg-[rgb(255,233,224)]">Est. Value</th>
+              <th className="pr-16"></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Launch social media campaign for pro...</td>
-              <td>15-11-2024</td>
-              <td>In-process</td>
-              <td>Aisha Patel</td>
-              <td>www.aishapatel....</td>
-              <td>Sophie Choudhury</td>
-              <td>Medium</td>
-              <td>20-11-2024</td>
-              <td>6,200,000 </td>
+              <td className="border  border-[rgb(246,246,246)]">1</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Launch social media campaign for pro...
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">15-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">In-process</td>
+              <td className="border  border-[rgb(246,246,246)]">Aisha Patel</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                www.aishapatel....
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Sophie Choudhury
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">Medium</td>
+              <td className="border  border-[rgb(246,246,246)]">20-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">6,200,000 </td>
+              <td className="border  border-[rgb(246,246,246)]"></td>
+            </tr>
+            <tr>
+              <td className="border  border-[rgb(246,246,246)]">2</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Launch social media campaign for pro...
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">15-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">In-process</td>
+              <td className="border  border-[rgb(246,246,246)]">Aisha Patel</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                www.aishapatel....
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Sophie Choudhury
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">Medium</td>
+              <td className="border  border-[rgb(246,246,246)]">20-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">6,200,000 </td>
+              <td className="border  border-[rgb(246,246,246)]"></td>
+            </tr>
+            <tr>
+              <td className="border  border-[rgb(246,246,246)]">3</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Launch social media campaign for pro...
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">15-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">In-process</td>
+              <td className="border  border-[rgb(246,246,246)]">Aisha Patel</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                www.aishapatel....
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Sophie Choudhury
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">Medium</td>
+              <td className="border  border-[rgb(246,246,246)]">20-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">6,200,000 </td>
+              <td className="border  border-[rgb(246,246,246)]"></td>
+            </tr>
+            <tr>
+              <td className="border  border-[rgb(246,246,246)]">4</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Launch social media campaign for pro...
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">15-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">In-process</td>
+              <td className="border  border-[rgb(246,246,246)]">Aisha Patel</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                www.aishapatel....
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Sophie Choudhury
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">Medium</td>
+              <td className="border  border-[rgb(246,246,246)]">20-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">6,200,000 </td>
+              <td className="border  border-[rgb(246,246,246)]"></td>
+            </tr>
+            <tr>
+              <td className="border  border-[rgb(246,246,246)]">5</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Launch social media campaign for pro...
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">15-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">In-process</td>
+              <td className="border  border-[rgb(246,246,246)]">Aisha Patel</td>
+              <td className="border  border-[rgb(246,246,246)]">
+                www.aishapatel....
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">
+                Sophie Choudhury
+              </td>
+              <td className="border  border-[rgb(246,246,246)]">Medium</td>
+              <td className="border  border-[rgb(246,246,246)]">20-11-2024</td>
+              <td className="border  border-[rgb(246,246,246)]">6,200,000 </td>
+              <td className="border  border-[rgb(246,246,246)]"></td>
             </tr>
           </tbody>
-        </table>
+        </table>  
       </div>
     </>
   );
